@@ -2,19 +2,10 @@
 // Return true or false
 
 var isMonotone = function(arr){
-    if (arr.length > 0) {
-        for (let i = 0; i < arr.length; i++) {
-            for (let j = 1; j < arr.length; j++) {
-                if (arr[j] < arr[i]) {
-                    return false
-                } else {
-                    return true;
-                }
-            }
-        }
-    } else if (arr.length = 0) {
-        return true;
-    } else {
-        return true;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i - 1] > arr[i]) {
+        return false;
+      }
     }
-}
+    return true;
+  }
